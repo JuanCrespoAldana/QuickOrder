@@ -1,0 +1,239 @@
+/* MODO OSCURO - Añadir esta clase al body para activar */
+body.dark-mode {
+  --primary-color: #c7a17a; /* Puedes cambiar si quieres */
+  --background-color: #121212;
+  --dark-color: #f0f0f0;
+  background-color: var(--background-color);
+  color: var(--dark-color);
+}
+
+/* Cambiar fondo general y texto */
+body.dark-mode,
+body.dark-mode .container-hero,
+body.dark-mode .container-navbar,
+body.dark-mode .banner,
+body.dark-mode .footer {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Links en modo oscuro */
+body.dark-mode a,
+body.dark-mode a:visited {
+  color: var(--primary-color);
+}
+
+body.dark-mode a:hover {
+  color: #f0a500; /* amarillo más cálido */
+}
+
+/* Header hero container */
+body.dark-mode .container-hero {
+  background-color: #1e1e1e;
+}
+
+/* Logo */
+body.dark-mode .container-logo h1.logo {
+  color: var(--primary-color);
+}
+
+/* Customer support */
+body.dark-mode .customer-support i {
+  color: var(--primary-color);
+}
+
+body.dark-mode .content-customer-support .text,
+body.dark-mode .content-customer-support .number {
+  color: #ccc;
+}
+
+/* Container user */
+body.dark-mode .container-user {
+  color: #ddd;
+}
+
+body.dark-mode .container-user a {
+  color: var(--primary-color);
+}
+
+body.dark-mode .container-user a:hover {
+  color: #fff;
+}
+
+/* Navbar */
+body.dark-mode .container-navbar {
+  background-color: #222;
+}
+
+body.dark-mode .menu a {
+  color: #ccc;
+}
+
+body.dark-mode .menu a:hover {
+  color: var(--primary-color);
+}
+
+/* Search box */
+body.dark-mode #search-box {
+  background-color: #333;
+  color: #eee;
+  border-color: #555;
+}
+
+/* Banner slides (si tienen superposición o texto) */
+body.dark-mode .banner .content-banner p,
+body.dark-mode .banner .content-banner h2,
+body.dark-mode .banner .content-banner a {
+  color: #f0f0f0;
+}
+
+/* Botones prev/next */
+body.dark-mode .prev,
+body.dark-mode .next {
+  background: rgba(255, 255, 255, 0.2);
+  color: #eee;
+}
+
+body.dark-mode .prev:hover,
+body.dark-mode .next:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+/* Cards productos */
+body.dark-mode .card-product {
+  background-color: #1f1f1f;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .card-product .discount {
+  background-color: #b74949;
+  color: #fff;
+}
+
+body.dark-mode .content-card-product h3,
+body.dark-mode .content-card-product p.price {
+  color: #eee;
+}
+
+/* Footer */
+body.dark-mode .footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+}
+
+body.dark-mode .footer a {
+  color: var(--primary-color);
+}
+
+body.dark-mode .footer a:hover {
+  color: #f0a500;
+}
+
+/* Contador de inactividad */
+body.dark-mode #contador-inactividad {
+  background: #721c24;
+  color: #f8d7da;
+}
+
+/* Cambios para iconos fontawesome (si es necesario) */
+body.dark-mode .fa-solid,
+body.dark-mode .fa-regular,
+body.dark-mode .fa-duotone {
+  color: var(--primary-color);
+}
+
+/* Contenedor del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Ocultar el checkbox real */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider (el interruptor) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+/* Círculo que se mueve */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+/* Cuando el checkbox está activado */
+.switch input:checked + .slider {
+  background-color: #4caf50; /* Verde */
+}
+
+/* Mover el círculo hacia la derecha cuando está activo */
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* Efecto hover */
+.switch:hover .slider {
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+/* Oculta ambos iconos inicialmente */
+.icon-sun,
+.icon-moon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #f39c12; /* Amarillo para el sol */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* para que no interfieran con el click */
+}
+
+/* Posicionamos los iconos */
+.icon-sun {
+  left: 8px;
+}
+
+.icon-moon {
+  right: 8px;
+  color: #f1c40f; /* Un amarillo más tenue o diferente si quieres */
+}
+
+/* Cuando está apagado (modo claro), mostramos el sol */
+.switch input:not(:checked) + .slider .icon-sun {
+  opacity: 1;
+}
+
+.switch input:not(:checked) + .slider .icon-moon {
+  opacity: 0;
+}
+
+/* Cuando está encendido (modo oscuro), mostramos la luna */
+.switch input:checked + .slider .icon-sun {
+  opacity: 0;
+}
+
+.switch input:checked + .slider .icon-moon {
+  opacity: 1;
+}

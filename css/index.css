@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--primary-color: #c7a17a;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+/* HEADER */
+
+.container-hero {
+	background-color: var(--background-color);
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	font-size: 2rem;
+}
+
+.container-logo i {
+	font-size: 4.8rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+	color: black;
+	transition: color 0.3s;
+}
+
+.container-user a {
+	position: relative;
+}
+
+.container-user a:hover i {
+	color: #fff;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.container-user .fa-user::after,
+.container-user .fa-basket-shopping::after {
+	content: '';
+	width: 4rem;
+	height: 2px;
+	background-color: black;
+	position: absolute;
+	bottom: -5px;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.container-user .fa-user::after {
+	left: 26%;
+}
+
+.container-user .fa-basket-shopping::after {
+	left: 62%;
+}
+
+.container-user .fa-user:hover::after,
+.container-user .fa-basket-shopping:hover::after {
+	opacity: 1;
+	width: 3rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/* NAVBAR */
+
+.container-navbar {
+	background-color: var(--primary-color);
+	position: relative;
+	z-index: 10;
+}
+
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+	display: none;
+}
+
+.menu {
+	display: flex;
+	gap: 2rem;
+}
+
+.menu li {
+	list-style: none;
+}
+
+.search-wrapper {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+#search-icon {
+	font-size: 18px;
+	color: #fff;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+#search-icon:hover {
+	color: #f0a500;
+}
+
+#search-box {
+	display: none;
+	padding: 5px 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	outline: none;
+	background-color: #fff;
+	color: #333;
+	min-width: 150px;
+}
+
+#search-box.show {
+	display: block;
+}
+
+.menu a {
+	text-decoration: none;
+	font-size: 2rem;
+	color: var(--dark-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.menu a:hover::after {
+	opacity: 1;
+}
+
+.menu a:hover {
+	color: #fff;
+}
+
+/* BANNER */
+
+.banner {
+	position: relative;
+	height: 60rem;
+	overflow: hidden;
+}
+
+.slider {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.slide {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out;
+}
+
+.slide1 {
+	background-image: url('../img/fondo.webp');
+}
+
+.slide2 {
+	background-image: url('../img/aaaaaaaaaaaaaaa.webp');
+}
+
+.slide3 {
+	background-image: url('../img/151218.webp');
+}
+
+.slide.active {
+	opacity: 1;
+	z-index: 1;
+}
+
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 4rem;
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+	border: none;
+	cursor: pointer;
+	padding: 0 1rem;
+	border-radius: 5px;
+	user-select: none;
+	z-index: 2;
+}
+
+.prev:hover,
+.next:hover {
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+	left: 1rem;
+}
+
+.next {
+	right: 1rem;
+}
+
+/* ======== Estilos del texto y botón del banner ========== */
+
+.content-banner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	max-width: 90rem;
+	width: 90%;
+	background: rgba(0, 0, 0, 0.35);
+	padding: 2rem 3rem;
+	border-radius: 1rem;
+	text-align: center;
+	color: #fff;
+}
+
+.content-banner p {
+	color: #ffffff;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.content-banner h2 {
+	color: #fff;
+	font-size: 3.5rem;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
+
+.content-banner a {
+	margin-top: 2rem;
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--primary-color);
+	display: inline-block;
+	padding: 1rem 3rem;
+	text-transform: uppercase;
+	border-radius: 3rem;
+	transition: all 0.3s ease;
+}
+
+.content-banner a:hover {
+	color: var(--primary-color);
+	background-color: #fff;
+}
+
+/* TOP PRODUCTS */
+
+.top-products {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.container-options {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 1rem;
+}
+
+.container-options span {
+	color: #777;
+	background-color: #fff;
+	padding: 0.7rem 3rem;
+	font-size: 1.4rem;
+	text-transform: capitalize;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.container-options span:hover,
+.container-options span.active {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+/* Products */
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
+}
+
+.card-product {
+	background-color: #fff;
+	padding: 2rem 3rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+.container-img {
+	position: relative;
+}
+
+.container-img img {
+	width: 100%;
+}
+
+.container-img .discount {
+	position: absolute;
+	left: 0;
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 2px 1.2rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+	background-color: #000;
+}
+
+.button-group {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: absolute;
+	top: 0;
+	right: -3rem;
+	z-index: -1;
+	transition: all 0.4s ease;
+}
+
+.button-group span {
+	border: 1px solid var(--primary-color);
+	padding: 0.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.button-group span:hover {
+	background-color: var(--primary-color);
+}
+
+.button-group span i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.button-group span:hover i {
+	color: #fff;
+}
+
+.card-product:hover .button-group {
+	z-index: 0;
+	right: -1rem;
+}
+
+.content-card-product {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, min-content);
+	row-gap: 1rem;
+}
+
+.stars {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+}
+
+.stars i {
+	font-size: 1.3rem;
+	color: var(--primary-color);
+}
+
+.content-card-product h3 {
+	grid-row: 2/3;
+	grid-column: 1/-1;
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+
+.content-card-product h3:hover {
+	color: var(--primary-color);
+}
+
+.add-cart {
+	justify-self: start;
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.add-cart:hover {
+	background-color: var(--primary-color);
+}
+
+.add-cart i {
+	font-size: 1.5rem;
+	color: var(--primary-color);
+}
+
+.add-cart:hover i {
+	color: #fff;
+}
+
+.price {
+	font-size: 1.6rem;
+	font-weight: 700;
+	justify-self: end;
+	color: var(--primary-color);
+}
+
+/* FOOTER */
+
+footer {
+	background-color: var(--dark-color);
+	color: white;
+	padding: 5rem 0 4rem;
+	text-align: center;
+}
+
+footer h2 {
+	font-size: 3rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+footer p {
+	font-size: 1.4rem;
+	line-height: 1.8;
+	margin-bottom: 3rem;
+}
+
+footer a {
+	color: var(--primary-color);
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+/* Contenedor del switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+/* Ocultar el checkbox real */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider (el interruptor) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+/* Círculo que se mueve */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+/* Cuando el checkbox está activado */
+.switch input:checked + .slider {
+  background-color: #4caf50; /* Verde */
+}
+
+/* Mover el círculo hacia la derecha cuando está activo */
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* Efecto hover */
+.switch:hover .slider {
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+/* Oculta ambos iconos inicialmente */
+.icon-sun,
+.icon-moon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #f39c12; /* Amarillo para el sol */
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* para que no interfieran con el click */
+}
+
+/* Posicionamos los iconos */
+.icon-sun {
+  left: 8px;
+}
+
+.icon-moon {
+  right: 8px;
+  color: #f1c40f; /* Un amarillo más tenue o diferente si quieres */
+}
+
+/* Cuando está apagado (modo claro), mostramos el sol */
+.switch input:not(:checked) + .slider .icon-sun {
+  opacity: 1;
+}
+
+.switch input:not(:checked) + .slider .icon-moon {
+  opacity: 0;
+}
+
+/* Cuando está encendido (modo oscuro), mostramos la luna */
+.switch input:checked + .slider .icon-sun {
+  opacity: 0;
+}
+
+.switch input:checked + .slider .icon-moon {
+  opacity: 1;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 991px) {
+	.hero {
+		flex-direction: column;
+	}
+
+	.customer-support {
+		margin-bottom: 2rem;
+	}
+
+	.navbar {
+		justify-content: flex-start;
+		padding-left: 2rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		font-size: 3rem;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 768px) {
+	.content-banner {
+		padding: 15rem 1rem;
+		max-width: 100%;
+	}
+
+	.content-banner h2 {
+		font-size: 2.7rem;
+	}
+
+	.content-banner p {
+		font-size: 1rem;
+	}
+
+	.container-products {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 500px) {
+	.container-products {
+		grid-template-columns: 1fr;
+	}
+
+	.container-user .fa-user {
+		padding-right: 0.7rem;
+		border-right: none;
+	}
+}

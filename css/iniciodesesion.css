@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(100deg, #000000, #00000020),
+    url('../img/fondousuario.jpg');
+}
+
+.login-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  padding: 60px 50px;
+  min-height: 250px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-container i.fa-meteor {
+  font-size: 100px;
+  color: #c7a17a;
+  margin-bottom: 50px;
+}
+
+.login-container h2 {
+  margin: 0 0 40px;
+  font-size: 24px;
+  color: #333;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 22px 0;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #c7a17a;
+  box-shadow: 0 0 0 2px rgba(199, 161, 122, 0.2);
+}
+
+.icon-left {
+  position: absolute;
+  left: 12px;
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.icon-right {
+  position: absolute;
+  right: 12px;
+  color: #999;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 40px 0 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #c7a17a;
+}
+
+.btn {
+  background: #c7a17a;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  margin-top: 16px;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background: #b68d6a;
+  transform: scale(1.03);
+}
+
+#error-msg {
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: left;
+  margin-top: 15px;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-link i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.back-container {
+  text-align: left;
+  margin-top: 15px;
+}

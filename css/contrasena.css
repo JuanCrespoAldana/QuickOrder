@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(100deg, #000000, #00000020),
+        url('../img/43.jpg');
+}
+
+.form-container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  padding: 60px 50px;
+  min-height: 250px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="submit"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  border: 1px solid #ddd;
+}
+
+.form-container input[type="submit"] {
+  background: #c7a17a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+  background: #b18d6a;
+  transform: scale(1.03);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: left;
+  margin-top: 10px;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-link i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.back-container {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.password-wrapper input[type="password"] {
+  width: 100%;
+  padding: 12px 45px 12px 15px; /* espacio a la derecha para el ícono */
+  border-radius: 25px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+}

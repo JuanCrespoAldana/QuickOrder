@@ -1,0 +1,308 @@
+/* Contenedor principal */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Título */
+main h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #c7a17a;
+    text-align: center;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+thead tr {
+    background-color: #c7a17a;
+    color: white;
+}
+
+thead th,
+tbody td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f0e7d8;
+}
+
+/* Acciones (Editar, Eliminar) */
+.acciones a {
+    margin: 0 8px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1.5px solid transparent; /* evitar cambio tamaño en hover */
+    color: #666;
+}
+
+.acciones a i {
+    pointer-events: none; /* evita que el icono intercepte el click */
+}
+
+/* Botón Editar */
+.acciones a.edit {
+    color: #4caf50;
+    border-color: #4caf50;
+}
+
+.acciones a.edit:hover {
+    color: white;
+    background-color: #4caf50;
+    border-color: #388e3c;
+    box-shadow: 0 2px 6px rgba(76, 175, 80, 0.6);
+}
+
+/* Botón Eliminar */
+.acciones a.delete {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.acciones a.delete:hover {
+    color: white;
+    background-color: #e74c3c;
+    border-color: #c0392b;
+    box-shadow: 0 2px 6px rgba(231, 76, 60, 0.6);
+}
+
+/* Botones abajo (Atrás y Nuevo Usuario) */
+.botones-abajo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Link Atrás */
+.back-link {
+    font-weight: 600;
+    color: #666;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.back-link i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.back-link:hover {
+    color: #c7a17a;
+}
+
+/* Botón Nuevo Usuario */
+.btn-nuevo {
+    background-color: #c7a17a;
+    color: #fff !important;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-nuevo:hover {
+    background-color: #b68d6a;
+    transform: scale(1.05);
+}
+
+/* Contenedor principal (alternativo) */
+.container {
+    max-width: 600px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 40px 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.container h1 {
+    font-size: 28px;
+    color: #c7a17a;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #666;
+}
+
+/* Botones contenedor */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Botones generales */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Botón Usuarios */
+.btn-usuarios {
+    background-color: #c7a17a;
+}
+
+.btn-usuarios:hover {
+    background-color: #b68d6a;
+    transform: scale(1.05);
+}
+
+/* Botón Platillos */
+.btn-platillos {
+    background-color: #4a90e2;
+    /* azul */
+}
+
+.btn-platillos:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+/* Iconos dentro de los botones */
+.btn i {
+    font-size: 22px;
+}
+
+.salir-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn-salir {
+    background-color: #e74c3c;
+    /* rojo */
+}
+
+.btn-salir:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.btn-volver {
+    text-decoration: none;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn-volver i {
+    margin-right: 5px;
+}
+
+.botones button i {
+    margin-right: 5px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario .campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.formulario .campo label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.formulario .campo input,
+.formulario .campo select {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.volver-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 15px 25px;
+    background-color: #4caf50; /* verde */
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(76,175,80,0.5);
+}

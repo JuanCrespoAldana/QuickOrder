@@ -1,0 +1,167 @@
+/* Contenedor que centra vertical y horizontalmente */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-wrapper {
+    width: 100%;
+    max-width: 480px; /* Ancho máximo del cuadro */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carrito-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+}
+
+.carrito-items {
+    margin-top: 20px;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-info h3 {
+    margin: 0 0 8px 0;
+    color: #222;
+    font-size: 1.1rem;
+}
+
+.item-info p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.cantidad {
+    width: 50px;
+    padding: 4px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.item-total {
+    text-align: right;
+}
+
+.item-total p {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    color: #111;
+    font-size: 1rem;
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+.carrito-resumen {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.btn-pagar {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pagar:hover {
+    background-color: #1e8449;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: left;
+  margin-top: 10px;
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-link i {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.back-container {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.form-confirmar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.form-confirmar input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.btn-confirmar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-confirmar:hover {
+  background-color: #218838;
+}
+
+.pedido-card {
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgb(0 123 255 / 0.1);
+}

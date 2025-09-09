@@ -1,0 +1,207 @@
+/* Estilos generales del contenedor principal */
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Sección Pedidos Nuevos */
+.orders-section {
+  flex: 1;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.orders-section h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 8px;
+}
+
+/* Sección Cocina */
+.kitchen-section {
+  flex: 2;
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.kitchen-section h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 8px;
+}
+
+/* Columnas de estados */
+.status-columns {
+  display: flex;
+  gap: 20px;
+}
+
+.status-column {
+  flex: 1;
+  background-color: #e9f0fc;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: inset 0 0 8px rgba(0, 123, 255, 0.1);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-column h3 {
+  color: #0056b3;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 6px;
+}
+
+.status-cards {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* Tarjetas de pedido */
+.pedido-card {
+  background-color: #f9fbff;
+  border: 1px solid #d1e0ff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.pedido-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.pedido-card h4 {
+  margin: 0 0 8px 0;
+  color: #003366;
+  font-weight: 700;
+}
+
+.pedido-card p {
+  margin: 6px 0;
+  color: #334d6e;
+  font-size: 0.95rem;
+}
+
+.pedido-card ul {
+  margin: 10px 0 15px 18px;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+/* Botón Cambiar Estado */
+.btn-cambiar-estado {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.25rem; /* más grande */
+  font-weight: 600;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 10px rgb(0 123 255 / 0.4);
+  margin-top: 10px;
+  width: 100%; /* botón ancho */
+  text-align: center;
+}
+
+.btn-cambiar-estado:hover {
+  background-color: #0056b3;
+  box-shadow: 0 7px 14px rgb(0 86 179 / 0.6);
+}
+
+.btn-cambiar-estado:active {
+  background-color: #004085;
+  box-shadow: 0 3px 6px rgb(0 64 128 / 0.7);
+  transform: translateY(2px);
+}
+
+/* Barra lateral Información de Mesas */
+.table-info {
+  flex-basis: 300px;
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  color: #334d6e;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.table-info h3 {
+  color: #007bff;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.table-card {
+  background-color: #e9f0fc;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: inset 0 0 8px rgba(0,123,255,0.1);
+  font-style: italic;
+}
+
+/* Scroll bar estilizado para contenedores con scroll */
+.orders-section::-webkit-scrollbar,
+.kitchen-section::-webkit-scrollbar,
+.status-cards::-webkit-scrollbar {
+  width: 8px;
+}
+
+.orders-section::-webkit-scrollbar-thumb,
+.kitchen-section::-webkit-scrollbar-thumb,
+.status-cards::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .orders-section,
+  .kitchen-section {
+    max-height: none;
+    overflow-y: visible;
+  }
+  
+  .status-columns {
+    flex-direction: column;
+  }
+
+  .table-info {
+    flex-basis: auto;
+    margin-top: 20px;
+  }
+}
